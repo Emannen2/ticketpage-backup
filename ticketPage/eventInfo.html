@@ -1,0 +1,481 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketHype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script defer src="/event.js"></script>
+    <link rel="stylesheet" href="/event.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+</head>
+
+<body>
+
+    <!-- Side Content -->
+    <div id="hamburgerContent"
+        class="flex flex-col fixed z-10 right-0 gap-4 h-full w-[25%] bg-black text-white text-center pt-[40%]">
+        <a class="bignoodle text-lg hover:text-gray-400 transition-colors" href="#">Contact</a>
+        <a class="bignoodle text-lg hover:text-gray-400 transition-colors" href="#">About</a>
+        <a class="bignoodle text-lg hover:text-gray-400 transition-colors " href="/index.html">Home</a>
+    </div>
+
+    <div id="body" class="relative">
+
+        <!-- Navbar -->
+        <div class="border-y-2 w-full h-[4.5rem] flex flex-row fixed justify-center bg-white" id="bgb">
+            <img class="w-fit" src="/icons/tiiickethyyype.png" alt="TicketHype_Logo">
+
+
+
+            <div class="w-full flex flex-row self-center">
+            </div>
+
+            <div class="w-1/3 flex flex-row">
+                <!-- Navbar At Fullscreen -->
+                <nav id="navbarFull" class="pr-[60%] text-large flex flex-row gap-16 m-auto w-[10%]">
+                    <a class="bignoodle hover:text-slate-400 transition-colors" href="/contact.html">Contact</a>
+                    <a class="bignoodle hover:text-slate-400 transition-colors" href="/about.html">About</a>
+                    <a class="bignoodle hover:text-slate-400 transition-colors" href="/index.html">Home</a>
+
+                </nav>
+                <!-- Navbar at min 1300px -->
+                <div id="hamburgerMenu" class="z-50 mt-auto mb-auto" onclick="hamburgerToggle()">
+                    <div id="hamburgerLine1" class="w-[35px] h-[1px] bg-black m-2"></div>
+                    <div id="hamburgerLine2" class="w-[35px] h-[1px] bg-black m-2"></div>
+                    <div id="hamburgerLine3" class="w-[35px] h-[1px] bg-black m-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blurToggle bg-cover">
+        <div class="w-full min-[1020px]:mt-16 flex justify-center">
+            <div class="min-[1265px]:w-[1250] h-full max-[1265px]:w-[1000px] max-[1020px]:w-full">
+                <div class="min-[1265px]:w-[1250] h-full max-[1265px]:w-[1000px] max-[1020px]:w-full min-[750px]:h-[480] max-[750px]:h-[320] max-[1020px]:rounded-b-3xl min-[1020px]:rounded-3xl mt-10 shadow-md"
+                    style="background-image: url(/img/rap.jpg); background-position: center; background-size: cover;">
+                </div>
+                <!-- Event Details -->
+                <div class="flex justify-center mt-4">
+                    <div class="w-full justify-start flex">
+                        <!-- Title & Date -->
+                        <div class="font-bold flex flex-col">
+                            <h1 class="text-md max-[1060px]:pl-5">
+                                13th Dec
+                            </h1>
+                            <h1 class="bignoodle text-3xl max-[1060px]:pl-5">
+                                The Art Of Rap
+                            </h1>
+                            <div class="mt-10 ">
+                                <h1 class="font-normal max-[1060px]:pl-5">
+                                    Join us for an unforgettable experience on the beautiful Island of Malta (St
+                                    Julians). 2 days & nights of sun, fun &
+                                    frolics.
+                                </h1>
+                            </div>
+
+                            <div class="flex mt-5">
+                                <div id="publisher"
+                                    class="max-[1060px]:ml-5 max-[1265px]:w-[350px] w-full h-16 rounded-2xl bg-slate-100 border-slate-300 flex justify-between">
+                                    <h1 class="font-normal text-[18px] mt-2 ml-5">
+                                        By <strong>Emanuell</strong>
+                                        <br> 12 Followers
+                                    </h1>
+                                    <div class="items-center flex">
+                                        <button
+                                            class="mr-2.5 box-border border-2 font-semibold text-slate-50 bg-blue-600 w-36 rounded-2xl h-10">
+                                            Follow
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="max-[1060px]:pl-5 mt-10 text-2xl">
+                                <h1>
+                                    When and where
+                                </h1>
+                                <div class="flex justify-start w-full">
+                                    <div class="flex w-10 rounded-xl h-10 mt-10 bg-slate-200">
+                                        <i class="fa-solid fa-calendar-days m-auto"></i>
+                                    </div>
+                                    <div class="max-[1060px]:pl-5">
+                                        <h1 class="pt-11 pl-2 font-semibold text-lg">
+                                            Time
+                                        </h1>
+                                        <h1 class="pl-2 text-[16px] font-normal">
+                                            12:00
+                                        </h1>
+                                    </div>
+
+                                    <div class="flex justify-end pl-16 min-[700px]:pl-40 mt-10">
+                                        <div class="w-10 flex justify-center rounded-xl h-10 bg-slate-200">
+                                            <i class="fa-solid fa-location-dot m-auto"></i>
+                                        </div>
+                                        <div class="max-[1060px]:pl-5 pt-1">
+                                            <h1 class="font-semibold text-lg pl-2">
+                                                Location
+                                            </h1>
+                                            <h1 class="text-[16px] font-normal pl-2">
+                                                Inhawi Hostel,
+                                                st julians
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="max-[1060px]:pl-5 mt-16">
+                                <h1 class="text-3xl">
+                                    Refund Policy
+                                </h1>
+                                <h1 class="mt-5 font-normal">
+                                    Contact the organiser to request a refund.<br>
+                                    TicketHype's fee is nonrefundable.
+                                </h1>
+                            </div>
+
+                            <div class="max-[1060px]:pl-5 mt-10 text-2xl">
+                                <h1>
+                                    Event information
+                                </h1>
+                                <div class="flex justify-start w-full">
+                                    <div class="flex w-10 rounded-xl h-10 mt-10 bg-slate-200">
+                                        <i class="fa-regular fa-clock m-auto"></i>
+                                    </div>
+                                    <div class="pl-2">
+                                        <h1 class="pt-12 font-semibold text-sm">
+                                            2 days 1 hour
+                                        </h1>
+                                    </div>
+
+                                    <div class="flex justify-end pl-16 mt-10">
+                                        <div class="w-10 flex justify-center rounded-xl h-10 bg-slate-200">
+                                            <i class="fa-solid fa-mobile-screen-button m-auto"></i>
+                                        </div>
+                                        <div class="pl-2 pt-2">
+                                            <h1 class="font-semibold text-sm">
+                                                Mobile eTicket
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-10 max-[1060px]:pl-5 flex-wrap">
+                                <h1 class="text-sm font-normal">
+                                    "The Art of Rap" is a one-of-a-kind event that celebrates the culture of hip hop and
+                                    the craft of rapping. Hosted by
+                                    some of the most iconic names in the game, this event brings together a diverse
+                                    lineup of seasoned veterans and
+                                    up-and-coming artists for a night of unforgettable performances and engaging
+                                    discussions.<br><br>
+
+                                    From the soulful beats of classic boom-bap to the futuristic sounds of trap, "The
+                                    Art of Rap" showcases the full range
+                                    of hip hop styles and influences. Each artist brings their unique flavor to the
+                                    stage, whether it's the hard-hitting
+                                    rhymes of Nas, the smooth flow of Lauryn Hill, or the infectious energy of Kendrick
+                                    Lamar.<br><br>
+
+                                    But "The Art of Rap" is more than just a concert. Between sets, the artists engage
+                                    in thought-provoking discussions on
+                                    the state of hip hop, its impact on society, and the role of the artist in the
+                                    modern world. From freestyle sessions to
+                                    intimate interviews, the event offers a rare glimpse into the minds of some of the
+                                    most influential figures in rap.<br><br>
+
+                                    And it's not just the artists who make "The Art of Rap" an unforgettable experience.
+                                    The audience plays a crucial role
+                                    in creating the atmosphere of the event, with fans of all ages and backgrounds
+                                    coming together to celebrate the culture
+                                    they love. Whether you're a lifelong hip hop head or a newcomer to the genre, "The
+                                    Art of Rap" is the perfect place to
+                                    immerse yourself in the music, the culture, and the community.<br><br>
+
+                                    So don't miss out on this one-of-a-kind event. Join us for "The Art of Rap" and
+                                    experience the power and passion of hip
+                                    hop like never before.
+                                </h1>
+                            </div>
+
+
+
+
+
+                            <!-- Location -->
+                            <div
+                                class="box-border min-[1265px]:w-full w-fit mt-10 border-8 max-[1060px]:ml-5 border-slate-200 rounded-3xl">
+                                <iframe class=" rounded-2xl min-[1265px]:w-full"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.400367362496!2d14.491219216061806!3d35.91269902484844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e454733fb21b9%3A0xb817b6637bbd31c2!2sInhawi%20Hostel!5e0!3m2!1ssv!2smt!4v1678359284494!5m2!1ssv!2smt"
+                                    width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            </div>
+                            <div class="flex max-[1060px]:ml-5 justify-start w-fit mt-16">
+                                <h1 class="font-semibold">
+                                    Tags:
+                                </h1>
+                            </div>
+
+
+                            <div class="flex max-[1060px]:ml-5 justify-start mt-5 space-x-5 w-fit flex-wrap flex-row">
+
+                                <div class="box-border border-[1px] border-slate-300 w-fit p-3 h-11 flex rounded-3xl">
+                                    <h1 class="text-lg font-semibold self-center">Rock & Roll</h1>
+                                </div>
+                                <div class="box-border border-[1px] border-slate-300 w-fit p-3 h-11 flex rounded-3xl">
+                                    <h1 class="text-lg font-semibold self-center">Eminem</h1>
+                                </div>
+                                <div class="box-border border-[1px] border-slate-300 w-fit p-3 h-11 flex rounded-3xl">
+                                    <h1 class="text-lg font-semibold self-center">Metallica</h1>
+                                </div>
+                            </div>
+
+                            <div class="flex max-[1060px]:ml-5 mt-5 justify-start space-x-5 w-fit flex-row mb-10">
+                                <div class="box-border border-[1px] border-slate-300 w-fit p-3 h-11 flex rounded-3xl">
+                                    <h1 class="text-lg font-semibold self-center">Concert</h1>
+                                </div>
+                                <div class="box-border border-[1px] border-slate-300 w-fit p-3 h-11 flex rounded-3xl">
+                                    <h1 class="text-lg font-semibold self-center">Singing</h1>
+                                </div>
+                                <div class="box-border border-[1px] border-slate-300 w-fit p-3 h-11 flex rounded-3xl">
+                                    <h1 class="text-lg font-semibold self-center">RnB</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Just the ticketbox on the right side -->
+                    <div id="end-div" class="w-full justify-end flex">
+                        <div class="fixedDiv justify-end flex">
+                            <div
+                                class="box-border fixed-box border-[1px] w-96 h-32 rounded-2xl border-slate-300 text-center">
+                                <h1 class="font-semibold text-lg mt-5">
+                                    From €28,32
+                                </h1>
+                                <button
+                                    class="font-semibold hiddenClck text-slate-50 bg-orange-600 w-80 rounded-lg h-12 mt-3">
+                                    Get tickets
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixedTicket flex-col w-full h-32 bg-white shadow-2xl">
+            <div class="justify-center flex">
+                <h1 class="font-bold text-xl mt-5">
+                    From €28,32
+                </h1>
+            </div>
+            <div class="justify-center flex">
+                <button class="font-semibold hiddenClcksm text-slate-50 bg-orange-600 w-[650px] rounded-lg h-14 mt-2">
+                    Get tickets
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ticketmenu m-auto">
+        <div class="flex justify-center">
+            <div
+                class="shadow-2xl h-[800px] w-full min-[1280px]:h-[750px] min-[900px]:h-[550px] min-[1280px]:w-[1150px] bg-gray-50 mt-10">
+                <div class="flex w-full justify-end">
+                </div>
+                <div class="flex">
+                    <div
+                        class="flex p-5 flex-col overflow-y-scroll w-full h-[800px] min-[900px]:h-[550px] min-[1280px]:h-[750px]">
+                        <h1 class="self-center font-semibold text-center">
+                            The art of rap
+                        </h1>
+                        <h1 class="self-center text-[12px] h-8 border-b-[1px] w-full text-center">
+                            Thu, 1 Jun 2023 14:00 - Mon, 5 Jun 2023 04:00 CEST
+                        </h1>
+                        <div class="p-5 mt-5 box-borde self-center rounded-lg border-2 min-[1280px]:w-[600px] h-56">
+
+                            <h1 class="font-semibold text-lg border-b-[1px] ">
+                                Premium Seats
+                            </h1>
+                            <h1 class="mt-2 font-bold text-lg">
+                                200€
+                            </h1>
+                            <h1 class="font-thin">
+                                +4,50€ service fee
+                            </h1>
+                            <h1 class="mt-2 font-thin">
+                                We have the best seats in the house, right in front of the stage. You will have a
+                                starter meal and a drink included.
+                            </h1>
+                        </div>
+                        <div class="p-5 mt-5 box-borde self-center rounded-lg border-2 min-[1280px]:w-[600px] h-56">
+                            <h1 class="font-semibold text-lg border-b-[1px] ">
+                                Front row seats
+                            </h1>
+                            <h1 class="mt-2 font-bold text-lg">
+                                150€
+                            </h1>
+                            <h1 class="font-thin">
+                                +4,50€ service fee
+                            </h1>
+                            <h1 class="mt-2 font-thin">
+                                We have the best seats in the house, right in front of the stage. You will have a
+                                starter meal and a drink included.
+                            </h1>
+                        </div>
+
+                        <div class="p-5 mt-5 box-borde self-center rounded-lg border-2 min-[1280px]:w-[600px] h-56">
+                            <h1 class="font-semibold text-lg border-b-[1px] ">
+                                Limited vision seats
+                            </h1>
+                            <h1 class="mt-2 font-bold text-lg">
+                                100€
+                            </h1>
+                            <h1 class="font-thin">
+                                +4,50€ service fee
+                            </h1>
+                            <h1 class="mt-2 font-thin">
+                                We have the best seats in the house, right in front of the stage. You will have a
+                                starter meal and a drink included.
+                            </h1>
+                        </div>
+
+                        <div class="p-5 mt-5 box-borde self-center rounded-lg border-2 min-[1280px]:w-[600px] h-56">
+                            <h1 class="font-semibold text-lg border-b-[1px] ">
+                                Standard seats
+                            </h1>
+                            <h1 class="mt-2 font-bold text-lg">
+                                125€
+                            </h1>
+                            <h1 class="font-thin">
+                                +4,50€ service fee
+                            </h1>
+                            <h1 class="mt-2 font-thin">
+                                We have the best seats in the house, right in front of the stage. You will have a
+                                starter meal and a drink included.
+                            </h1>
+                        </div>
+                        <div class="min-[800px]:hidden">
+                            <div class="flex flex-col justify-center">
+                                <div
+                                    class=" p-5 box-border text-center flex-col flex mt-10 mb-24 border-[1px] m-auto shadow-lg border-slate-400 rounded-lg w-3/4 h-fit">
+                                    <label for="Ticket">Choose a ticket:</label>
+
+                                    <select class="text-center rounded-lg bg-gray-300" name="Ticket" id="Tickets">
+                                        <option value="premiumSeats">Premium seats</option>
+                                        <option value="frontRow">Front row</option>
+                                        <option value="limitedVision">Limited Vision</option>
+                                    </select>
+
+                                </div>
+                                <div class="p-5 m-auto shadow-lg rounded-lg w-3/4 h-fit">
+                                    <h1 class="ticketPrices">
+                                        Ticket price: 200€
+                                    </h1>
+                                </div>
+                                <div class="m-auto mt-5 flex">
+                                    <button
+                                        class="bg-white box-border border-[1px] border-black w-fit px-4 py-2 h-fit rounded-lg">
+                                        Checkout
+                                    </button>
+                                </div>
+                                <div class="mr-96">
+                                    <button
+                                        class="closeDiv2 box-border border-2 rounded-lg bg-slate-100 hover:text-slate-500 font-bold px-2  m-auto text-2xl w-fit h-fit">X</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex-col w-1/2 flex mt-5 max-[800px]:hidden">
+                        <div class="flex justify-end">
+                            <button
+                                class="closeDiv hover:text-slate-500 font-bold p-2 mr-5 text-2xl w-fit h-fit">X</button>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div
+                                class=" p-5 box-border text-center flex-col flex mt-24 border-[1px] m-auto shadow-lg border-slate-400 rounded-lg w-3/4 h-fit">
+                                <label for="Ticket">Choose a ticket:</label>
+
+                                <select class="text-center rounded-lg bg-gray-300" name="Ticket" id="Ticket">
+                                    <option value="premiumSeats">Premium seats</option>
+                                    <option value="frontRow">Front row</option>
+                                    <option value="limitedVision">Limited Vision</option>
+                                </select>
+
+                            </div>
+                            <div class="p-5 m-auto min-[1280px]:mt-64 mt-32 shadow-lg rounded-lg w-3/4 h-fit">
+                                <h1 class="ticketPrice">
+                                    Ticket price: 200€
+                                </h1>
+                            </div>
+                            <div class="m-auto mt-5 flex">
+                                <button
+                                    class="bg-white box-border border-[1px] border-black w-fit px-4 py-2 h-fit rounded-lg">
+                                    Checkout
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full h-1/2 bg-red-900 max-[450px]:mt-56 mt-10">
+        <footer class="flex justify-center flex-col">
+            <div class="flex flex-row">
+
+
+                <div class="">
+                    <h1 class="text-2xl flex text-slate-50 ml-2 bignoodle">
+                        TicketHype
+                    </h1>
+
+                    <a class="text-sm flex text-slate-50 ml-2 w-fit bignoodle p-5" href="/tOs.html">
+                        Terms Of Service
+                    </a>
+
+                    <a class="text-sm flex text-slate-50 ml-2 w-fit bignoodle p-5" href="/tOs.html">
+                        Career
+                    </a>
+
+                    <a class="text-sm flex text-slate-50 ml-2 w-fit bignoodle p-5" href="/tOs.html">
+                        FAQ
+                    </a>
+
+                    <a class="text-sm flex text-slate-50 ml-2 w-fit bignoodle p-5" href="/tOs.html">
+                        Contact us
+                    </a>
+
+                </div>
+                <div class="flex flex-col justify-center w-full">
+                    <h1 class="text-md text-slate-100">
+                    </h1>
+
+                    <div class="flex justify-center space-x-5 p-5">
+                        <img class="self-center w-16 h-16" src="/icons/instagram.png" alt="">
+                        <img class="self-center w-16 h-16" src="/icons/twitter.png" alt="">
+                        <img class="self-center w-16 h-16" src="/icons/facebook.png" alt="">
+                    </div>
+                    <h1 class="text-sm justify-center flex text-slate-100 text-center">
+                        Feel Free To Follow Our Socials Above!
+                    </h1>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

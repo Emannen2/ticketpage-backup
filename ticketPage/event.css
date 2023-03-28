@@ -1,0 +1,149 @@
+/* @media screen and (min-width: 1265px) {
+    #fixedBox {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+} */
+
+.bignoodle {
+    font-family: 'Righteous', cursive;
+    -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.bgg{
+    background:
+    radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#474bff 68% 70%,#0000 72%) 100px 100px/calc(2*100px) calc(2*100px),
+    radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#474bff 68% 70%,#0000 72%) 100px 100px/calc(2*100px) calc(2*100px),
+    radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#474bff 68% 70%,#0000 72%) 0 0/calc(2*100px) calc(2*100px),
+    radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#474bff 68% 70%,#0000 72%) 0 0/calc(2*100px) calc(2*100px),
+    repeating-conic-gradient(#47d3ff 0 25%,#0000 0 50%) 0 0/calc(2*100px) calc(2*100px),
+    radial-gradient(#0000 66%,#474bff 68% 70%,#0000 72%) 0 calc(100px/2)/100px 100px
+    #47d3ff;
+
+}
+
+.fixedTicket{
+    bottom: 0;
+    position: fixed;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+#navbarFull{
+    visibility: visible;
+}
+
+#hamburgerMenu{
+    visibility: hidden;
+}
+
+#hamburgerContent{
+    visibility: hidden;
+    right: -25%;
+    transition: 1000ms;
+}
+
+#body{
+    overflow: hidden;
+    left: 0;
+    transition: 1000ms;
+}
+
+@media screen and (max-width: 1370px) {
+
+    #textInput{
+        width: fit-content;
+    }
+
+    #body.active{
+        overflow: hidden;
+        left: -25%;
+        opacity: 50%;
+        transition: 1000ms;
+    }
+
+    #navbarFull{
+        visibility: hidden;
+    }
+
+    #hamburgerMenu{
+        visibility: visible;
+    }
+
+    #hamburgerContent.active{
+        visibility: visible;
+        right: 0;
+        transition: 1000ms;
+    }
+
+    #hamburgerLine1{
+        transform: rotate(0deg) translate(0, 0);
+        position: relative;
+        max-width: 100%;
+        transition: 1000ms;
+    }
+    
+    #hamburgerLine2{
+        transform: rotate(0deg) translate(0, 0);
+        position: relative;
+        max-width: 100%;
+        transition: 1000ms;
+    }
+    
+    #hamburgerLine3{
+        opacity: 1;
+        transition: 250ms;
+    }
+
+    #hamburgerLine1.active{
+        transform: rotate(-405deg) translate(0, 7px);
+        position: relative;
+        max-width: 100%;
+        transition: 1000ms;
+    }
+
+    #hamburgerLine2.active{
+        transform: rotate(405deg) translate(0, -7px);
+        position: relative;
+        max-width: 100%;
+        transition: 1000ms;
+    }
+
+    #hamburgerLine3.active{
+        opacity: 0;
+        transition: 250ms;
+    }
+
+}
+
+.ticketmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  z-index: 999;
+  display: none;
+  
+}
+
+body {
+  overflow: visible;
+}
+
+.blur {
+  filter: blur(20px);
+}
