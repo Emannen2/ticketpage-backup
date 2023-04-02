@@ -74,11 +74,11 @@ body::-webkit-scrollbar-thumb {
         transition: 1000ms;
     }
 
-    #navbarFull{
-        visibility: hidden;
+    #navbarFull {
+        display: none;
     }
-
-    #hamburgerMenu{
+    #hamburgerMenu {
+        display: block;
         visibility: visible;
     }
 
@@ -86,6 +86,7 @@ body::-webkit-scrollbar-thumb {
         visibility: visible;
         right: 0;
         transition: 1000ms;
+        opacity: 90%;
     }
 
     #hamburgerLine1{
@@ -146,4 +147,13 @@ body {
 
 .blur {
   filter: blur(20px);
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .overflow-x-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
 }

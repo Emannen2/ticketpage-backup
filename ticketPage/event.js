@@ -33,123 +33,55 @@ const closeDiv2 = document.querySelector('.closeDiv2');
 // Get the top position of the div element
 const divTop = divElement.getBoundingClientRect().top + window.scrollY;
 
+// ticketbox
+function positionFixedBox() {
+    if (window.scrollY >= 513) {
+        fixedBox.classList.add('fixed');
+        fixedBox.classList.add('mt-[-514px]');
+    } else {
+        fixedBox.classList.remove('fixed');
+        fixedBox.classList.remove('mt-[-514px]');
+    }
+}
 
-// resize when 1265 px w
+function positionStopBox() {
+    if (window.scrollY >= 3538) {
+        fixedBox.classList.remove('fixed');
+    }
+}
+
+function positionUnFixedBox() {
+    if (window.scrollY >= 513) {
+        fixedBox.classList.remove('fixed');
+        fixedBox.classList.remove('mt-[-514px]');
+    } else {
+        fixedBox.classList.add('fixed');
+        fixedBox.classList.add('mt-[-514px]');
+    }
+}
+
 if (window.innerWidth <= 1265) {
-    rightDiv.classList.remove('flex');
-    rightDiv.classList.add('hidden');
-};
-
-addEventListener('resize', function () {
-    if (window.innerWidth <= 1265) {
-        rightDiv.classList.remove('flex');
-        rightDiv.classList.add('hidden');
-    }
-});
-
-addEventListener('resize', function () {
-    if (window.innerWidth >= 1265) {
-        rightDiv.classList.add('flex');
-        rightDiv.classList.remove('hidden');
-    }
-});
-
-// ticketbox
-addEventListener('resize', function () {
-    if (window.innerWidth <= 1265) {
-        function positionFixedBox() {
-            if (window.scrollY >= 515) {
-                fixedBox.classList.remove('fixed');
-                fixedBox.classList.remove('mt-[-514px]');
-            } else {
-                fixedBox.classList.remove('fixed');
-                fixedBox.classList.remove('mt-[-514px]');
-            }
-        }
-
-        // Call positionFixedBox() on load, scroll, and resize
-        window.addEventListener('load', positionFixedBox);
-        window.addEventListener('scroll', positionFixedBox);
-        window.addEventListener('resize', positionFixedBox);
-
-        divElement.classList.add('hidden');
-        divElement.classList.remove('flex');
-        mobileBox.classList.remove('hidden');
-        eventDetails.classList.add('p-10 text-center');
-        eventDetails.classList.add('text-center');
-    }
-});
-
-// ticketbox
-addEventListener('resize', function () {
-    if (window.innerWidth >= 1265) {
-        function positionFixedBox() {
-            if (window.scrollY >= 515) {
-                fixedBox.classList.add('fixed');
-                fixedBox.classList.add('mt-[-514px]');
-            } else {
-                fixedBox.classList.remove('fixed');
-                fixedBox.classList.remove('mt-[-514px]');
-            }
-        }
-
-        function positionUnFixedBox() {
-            if (window.scrollY >= 515) {
-                fixedBox.classList.remove('fixed');
-                fixedBox.classList.remove('mt-[-514px]');
-            } else {
-                fixedBox.classList.add('fixed');
-                fixedBox.classList.add('mt-[-514px]');
-            }
-        }
-
-        // Call positionFixedBox() on load, scroll, and resize
-        window.addEventListener('load', positionFixedBox);
-        window.addEventListener('scroll', positionFixedBox);
-        window.addEventListener('resize', positionUnFixedBox);
-        window.addEventListener('resize', positionFixedBox);
-
-        divElement.classList.remove('hidden');
-        divElement.classList.add('flex');
-        mobileBox.classList.add('hidden');
-        eventDetails.classList.remove('p-10 text-center');
-    }
-});
-
-if (window.innerWidth >= 1265) {
-    function positionFixedBox() {
-        if (window.scrollY >= 515) {
-            fixedBox.classList.add('fixed');
-            fixedBox.classList.add('mt-[-514px]');
-        } else {
-            fixedBox.classList.remove('fixed');
-            fixedBox.classList.remove('mt-[-514px]');
-        }
-    }
-
-    function positionUnFixedBox() {
-        if (window.scrollY >= 515) {
-            fixedBox.classList.remove('fixed');
-            fixedBox.classList.remove('mt-[-514px]');
-        } else {
-            fixedBox.classList.add('fixed');
-            fixedBox.classList.add('mt-[-514px]');
-        }
-    }
-
     // Call positionFixedBox() on load, scroll, and resize
     window.addEventListener('load', positionFixedBox);
     window.addEventListener('scroll', positionFixedBox);
+    window.addEventListener('resize', positionFixedBox);
+
+    divElement.classList.add('hidden');
+    divElement.classList.remove('flex');
+    mobileBox.classList.remove('hidden');
+} else {
+    // Call positionFixedBox() on load, scroll, and resize
+    window.addEventListener('load', positionFixedBox);
+    window.addEventListener('scroll', positionFixedBox);
+    window.addEventListener('scroll', positionStopBox);
     window.addEventListener('resize', positionUnFixedBox);
     window.addEventListener('resize', positionFixedBox);
-}
+    window.addEventListener('resize', positionStopBox);
 
-addEventListener('resize', function () {
-    if (window.innerWidth >= 1265) {
-        rightDiv.classList.add('flex');
-        rightDiv.classList.remove('hidden');
-    }
-});
+    divElement.classList.remove('hidden');
+    divElement.classList.add('flex');
+    mobileBox.classList.add('hidden');
+}
 
 hiddenClck.addEventListener('click', () => {
     blurToggle.classList.add('blur');
@@ -162,12 +94,6 @@ hiddenClck.addEventListener('click', () => {
     body.style.overflow = "hidden";
     body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
 });
-
-if (window.innerWidth <= 1265) {
-    mobileBox.classList.remove('hidden');
-} else if (window.innerWidth >= 1265) {
-    mobileBox.classList.add('hidden');
-}
 
 hiddenClckSm.addEventListener('click', () => {
     blurToggle.classList.add('blur');
@@ -198,32 +124,32 @@ closeDiv2.addEventListener('click', () => {
     body.style.backgroundColor = "";
 });
 
-let currPrice = 0;
-const price = document.querySelector('.ticketPrice');
-const prices = document.querySelector('.ticketPrices');
+// let currPrice = 0;
+// const price = document.querySelector('.ticketPrice');
+// const prices = document.querySelector('.ticketPrices');
 
-Ticket.addEventListener('change', () => {
-    if (Ticket.value === 'limitedVision') {
-        currPrice = 100;
-        price.innerHTML = "Ticket price: " + currPrice + "€";
-    } else if (Ticket.value === 'frontRow') {
-        currPrice = 150;
-        price.innerHTML = "Ticket price: " + currPrice + "€";
-    } else if (Ticket.value === 'premiumSeats') {
-        currPrice = 200;
-        price.innerHTML = "Ticket price: " + currPrice + "€";
-    }
-});
+// Ticket.addEventListener('change', () => {
+//     if (Ticket.value === 'limitedVision') {
+//         currPrice = 100;
+//         price.innerHTML = "Ticket price: " + currPrice + "€";
+//     } else if (Ticket.value === 'frontRow') {
+//         currPrice = 150;
+//         price.innerHTML = "Ticket price: " + currPrice + "€";
+//     } else if (Ticket.value === 'premiumSeats') {
+//         currPrice = 200;
+//         price.innerHTML = "Ticket price: " + currPrice + "€";
+//     }
+// });
 
-Tickets.addEventListener('change', () => {
-    if (Tickets.value === 'limitedVision') {
-        currPrice = 100;
-        prices.innerHTML = "Ticket price: " + currPrice + "€";
-    } else if (Tickets.value === 'frontRow') {
-        currPrice = 150;
-        prices.innerHTML = "Ticket price: " + currPrice + "€";
-    } else if (Tickets.value === 'premiumSeats') {
-        currPrice = 200;
-        prices.innerHTML = "Ticket price: " + currPrice + "€";
-    }
-});
+// Tickets.addEventListener('change', () => {
+//     if (Tickets.value === 'limitedVision') {
+//         currPrice = 100;
+//         prices.innerHTML = "Ticket price: " + currPrice + "€";
+//     } else if (Tickets.value === 'frontRow') {
+//         currPrice = 150;
+//         prices.innerHTML = "Ticket price: " + currPrice + "€";
+//     } else if (Tickets.value === 'premiumSeats') {
+//         currPrice = 200;
+//         prices.innerHTML = "Ticket price: " + currPrice + "€";
+//     }
+// });

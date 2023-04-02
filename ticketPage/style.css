@@ -57,11 +57,11 @@ body::-webkit-scrollbar-thumb {
     transition: 1000ms;
 }
 
-@media screen and (max-width: 1370px) {
+.overflow-x-scroll::-webkit-scrollbar {
+  display: none;
+}
 
-    #textInput{
-        width: fit-content;
-    }
+@media screen and (max-width: 1370px) {
 
     #body.active{
         overflow: hidden;
@@ -70,11 +70,11 @@ body::-webkit-scrollbar-thumb {
         transition: 1000ms;
     }
 
-    #navbarFull{
-        visibility: hidden;
+    #navbarFull {
+        display: none;
     }
-
-    #hamburgerMenu{
+    #hamburgerMenu {
+        display: block;
         visibility: visible;
     }
 
@@ -82,6 +82,7 @@ body::-webkit-scrollbar-thumb {
         visibility: visible;
         right: 0;
         transition: 1000ms;
+        opacity: 90%;
     }
 
     #hamburgerLine1{
